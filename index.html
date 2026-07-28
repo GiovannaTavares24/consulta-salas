@@ -7,239 +7,52 @@
   <title>Consulta de Salas - Anhanguera Divinópolis/MG</title>
   <style>
     :root{
-      --brand:#f15a22;
-      --brand-dark:#cf4311;
-      --brand-soft:#fff3ed;
-      --text:#2c2c2c;
-      --muted:#6f6f6f;
-      --bg:#f7f5f3;
-      --white:#ffffff;
-      --border:#eadfd9;
-      --shadow:0 12px 30px rgba(0,0,0,.10);
-      --radius:20px;
+      --brand:#f15a22; --brand-dark:#cf4311; --brand-soft:#fff3ed;
+      --text:#2c2c2c; --muted:#6f6f6f; --bg:#f7f5f3; --white:#ffffff;
+      --border:#eadfd9; --shadow:0 12px 30px rgba(0,0,0,.10); --radius:20px;
     }
-
     *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
-
-    .hero{
-      background:var(--brand);
-      color:white;
-      text-align:center;
-      padding:26px 18px 92px;
-    }
-
-    .logo{
-      display:block;
-      width:min(300px,78vw);
-      margin:0 auto 14px;
-    }
-
-    .campus{
-      margin:0 0 12px;
-      font-size:clamp(1.35rem,4vw,2rem);
-      font-weight:800;
-      letter-spacing:.2px;
-    }
-
-    .hero h1{
-      margin:0 0 10px;
-      font-size:clamp(1.9rem,6vw,2.8rem);
-      line-height:1.05;
-    }
-
-    .welcome{
-      margin:0 auto;
-      max-width:700px;
-      font-size:1.05rem;
-      line-height:1.5;
-    }
-
-    .container{
-      width:min(840px,calc(100% - 28px));
-      margin:-54px auto 34px;
-    }
-
-    .panel{
-      background:var(--white);
-      border:1px solid #eee7e3;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:24px;
-    }
-
-    .panel-title{
-      margin:0 0 18px;
-      text-align:center;
-      font-size:1.12rem;
-      color:#414141;
-    }
-
-    .form-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
-
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+    .hero{background:var(--brand);color:white;text-align:center;padding:26px 18px 92px}
+    .logo{display:block;width:min(300px,78vw);max-height:150px;object-fit:contain;margin:0 auto 14px}
+    .campus{margin:0 0 12px;font-size:clamp(1.35rem,4vw,2rem);font-weight:800}
+    .hero h1{margin:0 0 10px;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.05}
+    .welcome{margin:0 auto;max-width:700px;font-size:1.05rem;line-height:1.5}
+    .container{width:min(840px,calc(100% - 28px));margin:-54px auto 34px}
+    .panel{background:var(--white);border:1px solid #eee7e3;border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+    .today{background:var(--brand-soft);border:1px solid #f6d8ca;border-radius:14px;padding:12px 14px;margin-bottom:18px;text-align:center}
+    .today strong{color:var(--brand-dark)}
+    .panel-title{margin:0 0 18px;text-align:center;font-size:1.08rem;color:#414141}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .full{grid-column:1/-1}
-
-    label{
-      display:block;
-      font-weight:700;
-      margin-bottom:7px;
-    }
-
-    select,button{
-      width:100%;
-      min-height:50px;
-      border-radius:13px;
-      font:inherit;
-    }
-
-    select{
-      border:1px solid var(--border);
-      background:white;
-      padding:0 13px;
-      color:var(--text);
-    }
-
-    select:disabled{
-      background:#f2f2f2;
-      color:#9a9a9a;
-    }
-
-    select:focus,button:focus{
-      outline:3px solid rgba(241,90,34,.22);
-      outline-offset:2px;
-    }
-
-    button{
-      border:0;
-      background:var(--brand);
-      color:white;
-      font-weight:800;
-      cursor:pointer;
-      padding:0 18px;
-      transition:.2s ease;
-    }
-
+    label{display:block;font-weight:700;margin-bottom:7px}
+    select,button{width:100%;min-height:50px;border-radius:13px;font:inherit}
+    select{border:1px solid var(--border);background:white;padding:0 13px;color:var(--text)}
+    select:disabled{background:#f2f2f2;color:#9a9a9a}
+    select:focus,button:focus{outline:3px solid rgba(241,90,34,.22);outline-offset:2px}
+    button{border:0;background:var(--brand);color:white;font-weight:800;cursor:pointer;padding:0 18px;transition:.2s ease}
     button:hover{background:var(--brand-dark)}
     button:disabled{opacity:.55;cursor:not-allowed}
-
-    #status{
-      min-height:24px;
-      margin-top:15px;
-      color:var(--muted);
-      text-align:center;
-    }
-
-    #resultados{
-      display:grid;
-      gap:16px;
-      margin-top:20px;
-    }
-
-    .result-card{
-      background:white;
-      border:1px solid #eee4de;
-      border-left:7px solid var(--brand);
-      border-radius:18px;
-      box-shadow:0 7px 20px rgba(0,0,0,.06);
-      padding:20px;
-    }
-
-    .badge{
-      display:inline-block;
-      background:var(--brand-soft);
-      color:var(--brand-dark);
-      border-radius:999px;
-      padding:6px 12px;
-      font-weight:800;
-      margin-bottom:14px;
-    }
-
-    .result-card h2{
-      margin:0 0 14px;
-      color:var(--brand-dark);
-      font-size:1.75rem;
-    }
-
-    .detail-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      margin:14px 0 10px;
-    }
-
-    .detail{
-      background:#faf8f7;
-      border:1px solid #efe5df;
-      border-radius:14px;
-      padding:14px;
-      text-align:center;
-    }
-
-    .detail .icon{
-      display:block;
-      font-size:1.5rem;
-      margin-bottom:6px;
-    }
-
-    .detail strong{
-      display:block;
-      margin-bottom:3px;
-      color:#444;
-    }
-
-    .detail span{
-      color:var(--muted);
-    }
-
-    .summary{
-      margin:14px 0 0;
-      padding-top:14px;
-      border-top:1px solid #eee5df;
-      line-height:1.55;
-    }
-
-    .empty{
-      background:white;
-      border:1px dashed #d9ccc5;
-      border-radius:18px;
-      padding:26px 18px;
-      text-align:center;
-      color:var(--muted);
-    }
-
-    footer{
-      background:#2d2d2d;
-      color:white;
-      margin-top:36px;
-      padding:24px 18px;
-      text-align:center;
-    }
-
-    footer p{
-      margin:5px 0;
-      line-height:1.45;
-    }
-
-    footer .help{
-      font-weight:800;
-    }
-
-    footer .small{
-      color:#d7d7d7;
-      font-size:.9rem;
-    }
-
-    @media (max-width:680px){
+    .secondary{background:white;color:var(--brand-dark);border:1px solid var(--brand);margin-top:10px}
+    .secondary:hover{background:var(--brand-soft)}
+    .hidden{display:none}
+    #status{min-height:24px;margin-top:15px;color:var(--muted);text-align:center}
+    #resultados{display:grid;gap:16px;margin-top:20px}
+    .result-card{background:white;border:1px solid #eee4de;border-left:7px solid var(--brand);border-radius:18px;box-shadow:0 7px 20px rgba(0,0,0,.06);padding:20px}
+    .badge{display:inline-block;background:var(--brand-soft);color:var(--brand-dark);border-radius:999px;padding:6px 12px;font-weight:800;margin-bottom:14px}
+    .result-card h2{margin:0 0 14px;color:var(--brand-dark);font-size:1.6rem}
+    .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 10px}
+    .detail{background:#faf8f7;border:1px solid #efe5df;border-radius:14px;padding:14px;text-align:center}
+    .detail .icon{display:block;font-size:1.5rem;margin-bottom:6px}
+    .detail strong{display:block;margin-bottom:3px;color:#444}
+    .detail span{color:var(--muted)}
+    .summary{margin:14px 0 0;padding-top:14px;border-top:1px solid #eee5df;line-height:1.55}
+    .empty{background:white;border:1px dashed #d9ccc5;border-radius:18px;padding:26px 18px;text-align:center;color:var(--muted)}
+    footer{background:#2d2d2d;color:white;margin-top:36px;padding:24px 18px;text-align:center}
+    footer p{margin:5px 0;line-height:1.45}
+    footer .help{font-weight:800}
+    footer .small{color:#d7d7d7;font-size:.9rem}
+    @media(max-width:680px){
       .form-grid{grid-template-columns:1fr}
       .full{grid-column:auto}
       .detail-grid{grid-template-columns:1fr}
@@ -258,39 +71,29 @@
 
   <main class="container">
     <section class="panel" aria-label="Consulta de salas">
-      <p class="panel-title">Selecione as informações abaixo para localizar sua sala.</p>
+      <div class="today" id="hojeBox">Carregando o dia de hoje...</div>
+      <p class="panel-title">Escolha seu curso, a disciplina e o turno.</p>
 
       <div class="form-grid">
         <div>
           <label for="curso">Curso</label>
-          <select id="curso">
-            <option value="">Selecione o curso</option>
-          </select>
+          <select id="curso"><option value="">Selecione o curso</option></select>
         </div>
-
         <div>
-          <label for="periodo">Período</label>
-          <select id="periodo" disabled>
-            <option value="">Selecione o período</option>
-          </select>
+          <label for="disciplina">Disciplina</label>
+          <select id="disciplina" disabled><option value="">Selecione a disciplina</option></select>
         </div>
-
         <div>
           <label for="turno">Turno</label>
-          <select id="turno" disabled>
-            <option value="">Selecione o turno</option>
-          </select>
+          <select id="turno" disabled><option value="">Selecione o turno</option></select>
         </div>
-
-        <div>
+        <div id="campoDia" class="hidden">
           <label for="dia">Dia</label>
-          <select id="dia" disabled>
-            <option value="">Selecione o dia</option>
-          </select>
+          <select id="dia"><option value="">Selecione o dia</option></select>
         </div>
-
         <div class="full">
           <button id="buscar" type="button" disabled>Encontrar minha sala</button>
+          <button id="trocarDia" class="secondary" type="button">Consultar outro dia</button>
         </div>
       </div>
 
@@ -306,274 +109,165 @@
   </footer>
 
   <script>
-    const cursoEl = document.getElementById("curso");
-    const periodoEl = document.getElementById("periodo");
-    const turnoEl = document.getElementById("turno");
-    const diaEl = document.getElementById("dia");
-    const buscarEl = document.getElementById("buscar");
-    const statusEl = document.getElementById("status");
-    const resultadosEl = document.getElementById("resultados");
+    const cursoEl=document.getElementById("curso");
+    const disciplinaEl=document.getElementById("disciplina");
+    const turnoEl=document.getElementById("turno");
+    const diaEl=document.getElementById("dia");
+    const campoDiaEl=document.getElementById("campoDia");
+    const trocarDiaEl=document.getElementById("trocarDia");
+    const buscarEl=document.getElementById("buscar");
+    const statusEl=document.getElementById("status");
+    const resultadosEl=document.getElementById("resultados");
+    const hojeBoxEl=document.getElementById("hojeBox");
 
-    let dados = [];
+    let dados=[]; let modoOutroDia=false;
+    const nomesDias=["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
+    const hoje=nomesDias[new Date().getDay()];
+    hojeBoxEl.innerHTML=`Hoje é <strong>${hoje}</strong>. As disciplinas são filtradas pelo dia selecionado.`;
 
-    const normalizarCabecalho = (texto) =>
-      texto.trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const normalizarCabecalho=texto=>texto.trim().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+    const limpar=texto=>(texto??"").trim();
 
-    const limpar = (texto) => (texto ?? "").trim();
-
-    function detectarSeparador(linha) {
-      const pv = (linha.match(/;/g) || []).length;
-      const vg = (linha.match(/,/g) || []).length;
-      return pv > vg ? ";" : ",";
+    function detectarSeparador(linha){
+      return (linha.match(/;/g)||[]).length>(linha.match(/,/g)||[]).length?";":",";
     }
 
-    function separarLinha(linha, separador) {
-      const campos = [];
-      let atual = "";
-      let entreAspas = false;
-
-      for (let i = 0; i < linha.length; i++) {
-        const c = linha[i];
-
-        if (c === '"') {
-          if (entreAspas && linha[i + 1] === '"') {
-            atual += '"';
-            i++;
-          } else {
-            entreAspas = !entreAspas;
-          }
-        } else if (c === separador && !entreAspas) {
-          campos.push(atual);
-          atual = "";
-        } else {
-          atual += c;
-        }
+    function separarLinha(linha,separador){
+      const campos=[]; let atual=""; let entreAspas=false;
+      for(let i=0;i<linha.length;i++){
+        const c=linha[i];
+        if(c==='"'){
+          if(entreAspas&&linha[i+1]==='"'){atual+='"';i++} else entreAspas=!entreAspas;
+        } else if(c===separador&&!entreAspas){campos.push(atual);atual=""}
+        else atual+=c;
       }
-
-      campos.push(atual);
-      return campos;
+      campos.push(atual); return campos;
     }
 
-    function parseCSV(texto) {
-      const linhas = texto
-        .replace(/^\uFEFF/, "")
-        .split(/\r?\n/)
-        .filter(l => l.trim() !== "");
-
-      if (linhas.length < 2) return [];
-
-      const separador = detectarSeparador(linhas[0]);
-      const cabecalhos = separarLinha(linhas[0], separador).map(normalizarCabecalho);
-
-      return linhas.slice(1).map(linha => {
-        const valores = separarLinha(linha, separador);
-        const obj = {};
-
-        cabecalhos.forEach((cab, i) => obj[cab] = limpar(valores[i]));
-
-        return {
-          Curso: obj.curso || "",
-          Periodo: obj.periodo || "",
-          Turno: obj.turno || "",
-          Dia: obj.dia || "",
-          Inicio: obj.inicio || "",
-          Fim: obj.fim || "",
-          Sala: obj.sala || "",
-          Bloco: obj.bloco || ""
+    function parseCSV(texto){
+      const linhas=texto.replace(/^\uFEFF/,"").split(/\r?\n/).filter(l=>l.trim()!=="");
+      if(linhas.length<2)return[];
+      const sep=detectarSeparador(linhas[0]);
+      const cab=separarLinha(linhas[0],sep).map(normalizarCabecalho);
+      return linhas.slice(1).map(linha=>{
+        const valores=separarLinha(linha,sep),obj={};
+        cab.forEach((c,i)=>obj[c]=limpar(valores[i]));
+        return{
+          Curso:obj.curso||"",Disciplina:obj.disciplina||"",Periodo:obj.periodo||"",
+          Turno:obj.turno||"",Dia:obj.dia||"",Inicio:obj.inicio||"",Fim:obj.fim||"",
+          Sala:obj.sala||"",Bloco:obj.bloco||""
         };
-      }).filter(r => r.Curso);
+      }).filter(r=>r.Curso&&r.Disciplina);
     }
 
-    function unicos(lista) {
-      return [...new Set(lista.filter(Boolean))].sort((a, b) =>
-        a.localeCompare(b, "pt-BR", { numeric: true })
-      );
+    function unicos(lista){
+      return[...new Set(lista.filter(Boolean))].sort((a,b)=>a.localeCompare(b,"pt-BR",{numeric:true}));
     }
 
-    function preencherSelect(select, valores, placeholder) {
-      select.innerHTML = `<option value="">${placeholder}</option>`;
-
-      valores.forEach(valor => {
-        const opt = document.createElement("option");
-        opt.value = valor;
-        opt.textContent = valor;
-        select.appendChild(opt);
+    function preencherSelect(select,valores,placeholder){
+      select.innerHTML=`<option value="">${placeholder}</option>`;
+      valores.forEach(valor=>{
+        const opt=document.createElement("option");
+        opt.value=valor; opt.textContent=valor; select.appendChild(opt);
       });
-
-      select.disabled = valores.length === 0;
+      select.disabled=valores.length===0;
     }
 
-    function resetApos(select) {
-      if (select === cursoEl) {
-        preencherSelect(periodoEl, [], "Selecione o período");
-        preencherSelect(turnoEl, [], "Selecione o turno");
-        preencherSelect(diaEl, [], "Selecione o dia");
-      } else if (select === periodoEl) {
-        preencherSelect(turnoEl, [], "Selecione o turno");
-        preencherSelect(diaEl, [], "Selecione o dia");
-      } else if (select === turnoEl) {
-        preencherSelect(diaEl, [], "Selecione o dia");
-      }
+    function diaSelecionado(){return modoOutroDia?diaEl.value:hoje}
 
-      buscarEl.disabled = true;
-      resultadosEl.innerHTML = "";
+    function atualizarCursos(){
+      const dia=diaSelecionado();
+      const cursos=unicos(dados.filter(r=>r.Dia===dia).map(r=>r.Curso));
+      preencherSelect(cursoEl,cursos,"Selecione o curso");
+      preencherSelect(disciplinaEl,[],"Selecione a disciplina");
+      preencherSelect(turnoEl,[],"Selecione o turno");
+      buscarEl.disabled=true; resultadosEl.innerHTML="";
+      statusEl.textContent=cursos.length?`Mostrando opções para ${dia}.`:`Não há aulas cadastradas para ${dia}. Use "Consultar outro dia".`;
     }
 
-    cursoEl.addEventListener("change", () => {
-      resetApos(cursoEl);
-      if (!cursoEl.value) return;
-
-      const periodos = unicos(
-        dados
-          .filter(r => r.Curso === cursoEl.value)
-          .map(r => r.Periodo)
-      );
-
-      preencherSelect(periodoEl, periodos, "Selecione o período");
+    cursoEl.addEventListener("change",()=>{
+      const dia=diaSelecionado();
+      const disciplinas=unicos(dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value).map(r=>r.Disciplina));
+      preencherSelect(disciplinaEl,disciplinas,"Selecione a disciplina");
+      preencherSelect(turnoEl,[],"Selecione o turno");
+      buscarEl.disabled=true; resultadosEl.innerHTML="";
     });
 
-    periodoEl.addEventListener("change", () => {
-      resetApos(periodoEl);
-      if (!periodoEl.value) return;
-
-      const turnos = unicos(
-        dados
-          .filter(r =>
-            r.Curso === cursoEl.value &&
-            r.Periodo === periodoEl.value
-          )
-          .map(r => r.Turno)
-      );
-
-      preencherSelect(turnoEl, turnos, "Selecione o turno");
+    disciplinaEl.addEventListener("change",()=>{
+      const dia=diaSelecionado();
+      const turnos=unicos(dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value&&r.Disciplina===disciplinaEl.value).map(r=>r.Turno));
+      preencherSelect(turnoEl,turnos,"Selecione o turno");
+      buscarEl.disabled=true; resultadosEl.innerHTML="";
     });
 
-    turnoEl.addEventListener("change", () => {
-      resetApos(turnoEl);
-      if (!turnoEl.value) return;
+    turnoEl.addEventListener("change",()=>{
+      buscarEl.disabled=!(cursoEl.value&&disciplinaEl.value&&turnoEl.value&&diaSelecionado());
+      resultadosEl.innerHTML="";
+    });
 
-      const dias = unicos(
-        dados
-          .filter(r =>
-            r.Curso === cursoEl.value &&
-            r.Periodo === periodoEl.value &&
-            r.Turno === turnoEl.value
-          )
-          .map(r => r.Dia)
-      );
-
-      preencherSelect(diaEl, dias, "Selecione o dia");
-
-      const nomesDias = [
-        "Domingo",
-        "Segunda-feira",
-        "Terça-feira",
-        "Quarta-feira",
-        "Quinta-feira",
-        "Sexta-feira",
-        "Sábado"
-      ];
-
-      const hoje = nomesDias[new Date().getDay()];
-
-      if (dias.includes(hoje)) {
-        diaEl.value = hoje;
+    trocarDiaEl.addEventListener("click",()=>{
+      modoOutroDia=!modoOutroDia;
+      campoDiaEl.classList.toggle("hidden",!modoOutroDia);
+      trocarDiaEl.textContent=modoOutroDia?"Voltar para hoje":"Consultar outro dia";
+      resultadosEl.innerHTML="";
+      if(modoOutroDia){
+        const dias=unicos(dados.map(r=>r.Dia));
+        preencherSelect(diaEl,dias,"Selecione o dia");
+        diaEl.value=dias.includes(hoje)?hoje:"";
+        cursoEl.disabled=true; disciplinaEl.disabled=true; turnoEl.disabled=true; buscarEl.disabled=true;
+        statusEl.textContent="Escolha o dia que deseja consultar.";
+      }else{
+        atualizarCursos();
       }
-
-      buscarEl.disabled = !diaEl.value;
     });
 
-    diaEl.addEventListener("change", () => {
-      buscarEl.disabled = !diaEl.value;
-      resultadosEl.innerHTML = "";
-    });
-
-    buscarEl.addEventListener("click", () => {
-      const encontrados = dados.filter(r =>
-        r.Curso === cursoEl.value &&
-        r.Periodo === periodoEl.value &&
-        r.Turno === turnoEl.value &&
-        r.Dia === diaEl.value
-      );
-
-      if (!encontrados.length) {
-        resultadosEl.innerHTML = `
-          <div class="empty">
-            Nenhuma sala encontrada para essa combinação.
-          </div>`;
+    diaEl.addEventListener("change",()=>{
+      if(!diaEl.value){
+        cursoEl.disabled=true;
+        preencherSelect(disciplinaEl,[],"Selecione a disciplina");
+        preencherSelect(turnoEl,[],"Selecione o turno");
+        buscarEl.disabled=true;
         return;
       }
-
-      encontrados.sort((a, b) => a.Inicio.localeCompare(b.Inicio));
-
-      resultadosEl.innerHTML = encontrados.map(r => `
-        <article class="result-card">
-          <div class="badge">${esc(r.Dia)}</div>
-          <h2>${esc(r.Curso)} • ${esc(r.Periodo)}º período</h2>
-
-          <div class="detail-grid">
-            <div class="detail">
-              <span class="icon">📍</span>
-              <strong>Sala</strong>
-              <span>${esc(r.Sala || "Não informada")}</span>
-            </div>
-
-            <div class="detail">
-              <span class="icon">🏢</span>
-              <strong>Bloco</strong>
-              <span>${esc(r.Bloco || "Não informado")}</span>
-            </div>
-
-            <div class="detail">
-              <span class="icon">🕒</span>
-              <strong>Horário</strong>
-              <span>${esc(r.Inicio || "—")} às ${esc(r.Fim || "—")}</span>
-            </div>
-          </div>
-
-          <p class="summary"><strong>Turno:</strong> ${esc(r.Turno)}</p>
-        </article>
-      `).join("");
+      atualizarCursos();
     });
 
-    function esc(texto) {
-      return String(texto)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+    buscarEl.addEventListener("click",()=>{
+      const dia=diaSelecionado();
+      const encontrados=dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value&&r.Disciplina===disciplinaEl.value&&r.Turno===turnoEl.value);
+      if(!encontrados.length){
+        resultadosEl.innerHTML=`<div class="empty">Nenhuma sala encontrada para essa combinação.</div>`;return;
+      }
+      encontrados.sort((a,b)=>a.Inicio.localeCompare(b.Inicio));
+      resultadosEl.innerHTML=encontrados.map(r=>`
+        <article class="result-card">
+          <div class="badge">${esc(r.Dia)} • ${esc(r.Turno)}</div>
+          <h2>${esc(r.Disciplina)}</h2>
+          <div class="detail-grid">
+            <div class="detail"><span class="icon">📍</span><strong>Sala</strong><span>${esc(r.Sala||"Não informada")}</span></div>
+            <div class="detail"><span class="icon">🏢</span><strong>Bloco</strong><span>${esc(r.Bloco||"Não informado")}</span></div>
+            <div class="detail"><span class="icon">🕒</span><strong>Horário</strong><span>${esc(r.Inicio||"—")} às ${esc(r.Fim||"—")}</span></div>
+          </div>
+          <p class="summary"><strong>Curso:</strong> ${esc(r.Curso)}</p>
+        </article>`).join("");
+    });
+
+    function esc(texto){
+      return String(texto).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
     }
 
-    async function iniciar() {
-      try {
-        const resposta = await fetch("salas.csv", { cache: "no-store" });
-
-        if (!resposta.ok) {
-          throw new Error("Não foi possível carregar salas.csv.");
-        }
-
-        const texto = await resposta.text();
-        dados = parseCSV(texto);
-
-        if (!dados.length) {
-          throw new Error("O arquivo salas.csv está vazio ou em formato inesperado.");
-        }
-
-        preencherSelect(
-          cursoEl,
-          unicos(dados.map(r => r.Curso)),
-          "Selecione o curso"
-        );
-
-        statusEl.textContent = "Selecione as opções acima para consultar.";
-      } catch (erro) {
-        statusEl.textContent =
-          "Erro ao carregar a base de salas. Verifique se o arquivo salas.csv está no repositório.";
+    async function iniciar(){
+      try{
+        const resposta=await fetch("salas.csv",{cache:"no-store"});
+        if(!resposta.ok)throw new Error("Não foi possível carregar salas.csv.");
+        dados=parseCSV(await resposta.text());
+        if(!dados.length)throw new Error("O CSV está vazio ou não possui Curso e Disciplina.");
+        atualizarCursos();
+      }catch(erro){
+        statusEl.textContent="Erro ao carregar a base. Confira o arquivo salas.csv e os cabeçalhos.";
         console.error(erro);
       }
     }
-
     iniciar();
   </script>
 </body>
