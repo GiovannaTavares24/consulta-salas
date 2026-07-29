@@ -76,7 +76,7 @@
   <main class="container">
     <section class="panel" aria-label="Consulta de salas">
       <div class="today" id="hojeBox">Carregando o dia de hoje...</div>
-      <p class="panel-title">Escolha seu curso, a disciplina, a modalidade e o turno.</p>
+      <p class="panel-title">Escolha seu curso, a modalidade e o turno. A disciplina aparecerá quando houver uma disciplina específica.</p>
 
       <div class="form-grid">
         <div>
@@ -84,12 +84,12 @@
           <select id="curso"><option value="">Selecione o curso</option></select>
         </div>
         <div>
-          <label for="disciplina">Disciplina</label>
-          <select id="disciplina" disabled><option value="">Selecione a disciplina</option></select>
-        </div>
-        <div>
           <label for="modalidade">Modalidade</label>
           <select id="modalidade" disabled><option value="">Selecione a modalidade</option></select>
+        </div>
+        <div id="campoDisciplina" class="hidden">
+          <label for="disciplina">Disciplina</label>
+          <select id="disciplina"><option value="">Selecione a disciplina</option></select>
         </div>
         <div>
           <label for="turno">Turno</label>
@@ -118,6 +118,7 @@
     const cursoEl=document.getElementById("curso");
     const disciplinaEl=document.getElementById("disciplina");
     const modalidadeEl=document.getElementById("modalidade");
+    const campoDisciplinaEl=document.getElementById("campoDisciplina");
     const turnoEl=document.getElementById("turno");
     const diaEl=document.getElementById("dia");
     const campoDiaEl=document.getElementById("campoDia");
@@ -127,10 +128,10 @@
     const resultadosEl=document.getElementById("resultados");
     const hojeBoxEl=document.getElementById("hojeBox");
 
-    let dados=[]; let modoOutroDia=false;
+    let dados=[]; let modoOutroDia=false; let exigeDisciplina=false;
     const nomesDias=["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
     const hoje=nomesDias[new Date().getDay()];
-    hojeBoxEl.innerHTML=`Hoje é <strong>${hoje}</strong>. As disciplinas são filtradas pelo dia selecionado.`;
+    hojeBoxEl.innerHTML=`Hoje é <strong>${hoje}</strong>.`;
 
     const normalizarCabecalho=texto=>texto.trim().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
     const limpar=texto=>(texto??"").trim();
@@ -172,7 +173,7 @@
           Bloco:obj.bloco||"",
           Professor:obj.docente||obj.professor||obj.tutor||""
         };
-      }).filter(r=>r.Curso&&r.Disciplina);
+      }).filter(r=>r.Curso);
     }
 
     function unicos(lista){
@@ -190,52 +191,76 @@
 
     function diaSelecionado(){return modoOutroDia?diaEl.value:hoje}
 
+    function atualizarBotao(){
+      const baseOk=cursoEl.value&&modalidadeEl.value&&turnoEl.value&&diaSelecionado();
+      const disciplinaOk=!exigeDisciplina||disciplinaEl.value;
+      buscarEl.disabled=!(baseOk&&disciplinaOk);
+    }
+
     function atualizarCursos(){
       const dia=diaSelecionado();
       const cursos=unicos(dados.filter(r=>r.Dia===dia).map(r=>r.Curso));
       preencherSelect(cursoEl,cursos,"Selecione o curso");
-      preencherSelect(disciplinaEl,[],"Selecione a disciplina");
       preencherSelect(modalidadeEl,[],"Selecione a modalidade");
+      preencherSelect(disciplinaEl,[],"Selecione a disciplina");
       preencherSelect(turnoEl,[],"Selecione o turno");
+      campoDisciplinaEl.classList.add("hidden");
+      exigeDisciplina=false;
       buscarEl.disabled=true; resultadosEl.innerHTML="";
       statusEl.textContent=cursos.length?`Mostrando opções para ${dia}.`:`Não há aulas cadastradas para ${dia}. Use "Consultar outro dia".`;
     }
 
     cursoEl.addEventListener("change",()=>{
       const dia=diaSelecionado();
-      const disciplinas=unicos(dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value).map(r=>r.Disciplina));
-      preencherSelect(disciplinaEl,disciplinas,"Selecione a disciplina");
-      preencherSelect(modalidadeEl,[],"Selecione a modalidade");
+      preencherSelect(disciplinaEl,[],"Selecione a disciplina");
       preencherSelect(turnoEl,[],"Selecione o turno");
+      campoDisciplinaEl.classList.add("hidden");
+      exigeDisciplina=false;
       buscarEl.disabled=true; resultadosEl.innerHTML="";
-    });
-
-    disciplinaEl.addEventListener("change",()=>{
-      const dia=diaSelecionado();
-      const modalidades=unicos(dados.filter(r=>
-        r.Dia===dia&&
-        r.Curso===cursoEl.value&&
-        r.Disciplina===disciplinaEl.value
-      ).map(r=>r.Modalidade));
+      if(!cursoEl.value){
+        preencherSelect(modalidadeEl,[],"Selecione a modalidade");
+        return;
+      }
+      const modalidades=unicos(dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value).map(r=>r.Modalidade));
       preencherSelect(modalidadeEl,modalidades,"Selecione a modalidade");
-      preencherSelect(turnoEl,[],"Selecione o turno");
-      buscarEl.disabled=true; resultadosEl.innerHTML="";
     });
 
     modalidadeEl.addEventListener("change",()=>{
       const dia=diaSelecionado();
+      preencherSelect(disciplinaEl,[],"Selecione a disciplina");
+      preencherSelect(turnoEl,[],"Selecione o turno");
+      campoDisciplinaEl.classList.add("hidden");
+      exigeDisciplina=false;
+      buscarEl.disabled=true; resultadosEl.innerHTML="";
+      if(!modalidadeEl.value)return;
+
+      const base=dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value&&r.Modalidade===modalidadeEl.value);
+      const disciplinas=unicos(base.map(r=>r.Disciplina));
+
+      if(disciplinas.length){
+        exigeDisciplina=true;
+        campoDisciplinaEl.classList.remove("hidden");
+        preencherSelect(disciplinaEl,disciplinas,"Selecione a disciplina");
+        statusEl.textContent="Selecione a disciplina.";
+      }else{
+        const turnos=unicos(base.map(r=>r.Turno));
+        preencherSelect(turnoEl,turnos,"Selecione o turno");
+        statusEl.textContent="Esta modalidade não possui disciplina específica cadastrada.";
+      }
+      atualizarBotao();
+    });
+
+    disciplinaEl.addEventListener("change",()=>{
+      const dia=diaSelecionado();
       const turnos=unicos(dados.filter(r=>
-        r.Dia===dia&&
-        r.Curso===cursoEl.value&&
-        r.Disciplina===disciplinaEl.value&&
-        r.Modalidade===modalidadeEl.value
+        r.Dia===dia&&r.Curso===cursoEl.value&&r.Modalidade===modalidadeEl.value&&r.Disciplina===disciplinaEl.value
       ).map(r=>r.Turno));
       preencherSelect(turnoEl,turnos,"Selecione o turno");
       buscarEl.disabled=true; resultadosEl.innerHTML="";
     });
 
     turnoEl.addEventListener("change",()=>{
-      buscarEl.disabled=!(cursoEl.value&&disciplinaEl.value&&modalidadeEl.value&&turnoEl.value&&diaSelecionado());
+      atualizarBotao();
       resultadosEl.innerHTML="";
     });
 
@@ -248,7 +273,7 @@
         const dias=unicos(dados.map(r=>r.Dia));
         preencherSelect(diaEl,dias,"Selecione o dia");
         diaEl.value=dias.includes(hoje)?hoje:"";
-        cursoEl.disabled=true; disciplinaEl.disabled=true; modalidadeEl.disabled=true; turnoEl.disabled=true; buscarEl.disabled=true;
+        cursoEl.disabled=true; modalidadeEl.disabled=true; disciplinaEl.disabled=true; turnoEl.disabled=true; buscarEl.disabled=true;
         statusEl.textContent="Escolha o dia que deseja consultar.";
       }else atualizarCursos();
     });
@@ -256,9 +281,11 @@
     diaEl.addEventListener("change",()=>{
       if(!diaEl.value){
         cursoEl.disabled=true;
-        preencherSelect(disciplinaEl,[],"Selecione a disciplina");
         preencherSelect(modalidadeEl,[],"Selecione a modalidade");
+        preencherSelect(disciplinaEl,[],"Selecione a disciplina");
         preencherSelect(turnoEl,[],"Selecione o turno");
+        campoDisciplinaEl.classList.add("hidden");
+        exigeDisciplina=false;
         buscarEl.disabled=true;
         return;
       }
@@ -267,7 +294,11 @@
 
     buscarEl.addEventListener("click",()=>{
       const dia=diaSelecionado();
-      const encontrados=dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value&&r.Disciplina===disciplinaEl.value&&r.Modalidade===modalidadeEl.value&&r.Turno===turnoEl.value);
+      const encontrados=dados.filter(r=>{
+        const base=r.Dia===dia&&r.Curso===cursoEl.value&&r.Modalidade===modalidadeEl.value&&r.Turno===turnoEl.value;
+        if(!base)return false;
+        return exigeDisciplina ? r.Disciplina===disciplinaEl.value : !r.Disciplina;
+      });
       if(!encontrados.length){
         resultadosEl.innerHTML=`<div class="empty">Nenhuma sala encontrada para essa combinação.</div>`;return;
       }
@@ -275,7 +306,7 @@
       resultadosEl.innerHTML=encontrados.map(r=>`
         <article class="result-card">
           <div class="badge">${esc(r.Dia)} • ${esc(r.Turno)}</div>
-          <h2>${esc(r.Disciplina)}</h2>
+          <h2>${r.Disciplina ? esc(r.Disciplina) : esc(r.Curso)}</h2>
           <div class="detail-grid">
             <div class="detail"><span class="icon">📍</span><strong>Sala</strong><span>${esc(r.Sala||"Não informada")}</span></div>
             <div class="detail"><span class="icon">🏢</span><strong>Bloco</strong><span>${esc(r.Bloco||"Não informado")}</span></div>
@@ -295,7 +326,7 @@
         const resposta=await fetch("salas.csv",{cache:"no-store"});
         if(!resposta.ok)throw new Error("Não foi possível carregar salas.csv.");
         dados=parseCSV(await resposta.text());
-        if(!dados.length)throw new Error("O CSV está vazio ou não possui Curso e Disciplina.");
+        if(!dados.length)throw new Error("O CSV está vazio ou não possui Curso.");
         atualizarCursos();
       }catch(erro){
         statusEl.textContent="Erro ao carregar a base. Confira o arquivo salas.csv e os cabeçalhos.";
