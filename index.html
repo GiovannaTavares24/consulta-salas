@@ -8,7 +8,7 @@
   <style>
     :root{
       --brand:#f15a22; --brand-dark:#cf4311; --brand-soft:#fff3ed;
-      --text:#2c2c2c; --muted:#6f6f6f; --bg:#f7f5f3; --white:#ffffff;
+      --text:#2c2c2c; --muted:#6f6f6f; --bg:#f7f5f3; --white:#fff;
       --border:#eadfd9; --shadow:0 12px 30px rgba(0,0,0,.10); --radius:20px;
     }
     *{box-sizing:border-box}
@@ -17,7 +17,7 @@
     .logo{display:block;width:min(300px,78vw);max-height:150px;object-fit:contain;margin:0 auto 14px}
     .campus{margin:0 0 12px;font-size:clamp(1.35rem,4vw,2rem);font-weight:800}
     .hero h1{margin:0 0 10px;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.05}
-    .welcome{margin:0 auto;max-width:700px;font-size:1.05rem;line-height:1.5}
+    .welcome{margin:0 auto 8px;max-width:700px;font-size:1.2rem;line-height:1.5;font-weight:700}.welcome-sub{margin:0 auto 26px;max-width:700px;font-size:1.05rem;line-height:1.5}
     .container{width:min(840px,calc(100% - 28px));margin:-54px auto 34px}
     .panel{background:var(--white);border:1px solid #eee7e3;border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
     .today{background:var(--brand-soft);border:1px solid #f6d8ca;border-radius:14px;padding:12px 14px;margin-bottom:18px;text-align:center}
@@ -41,17 +41,20 @@
     .result-card{background:white;border:1px solid #eee4de;border-left:7px solid var(--brand);border-radius:18px;box-shadow:0 7px 20px rgba(0,0,0,.06);padding:20px}
     .badge{display:inline-block;background:var(--brand-soft);color:var(--brand-dark);border-radius:999px;padding:6px 12px;font-weight:800;margin-bottom:14px}
     .result-card h2{margin:0 0 14px;color:var(--brand-dark);font-size:1.6rem}
-    .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 10px}
+    .detail-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0 10px}
     .detail{background:#faf8f7;border:1px solid #efe5df;border-radius:14px;padding:14px;text-align:center}
     .detail .icon{display:block;font-size:1.5rem;margin-bottom:6px}
     .detail strong{display:block;margin-bottom:3px;color:#444}
-    .detail span{color:var(--muted)}
+    .detail span{color:var(--muted);word-break:break-word}
     .summary{margin:14px 0 0;padding-top:14px;border-top:1px solid #eee5df;line-height:1.55}
     .empty{background:white;border:1px dashed #d9ccc5;border-radius:18px;padding:26px 18px;text-align:center;color:var(--muted)}
     footer{background:#2d2d2d;color:white;margin-top:36px;padding:24px 18px;text-align:center}
     footer p{margin:5px 0;line-height:1.45}
     footer .help{font-weight:800}
     footer .small{color:#d7d7d7;font-size:.9rem}
+    @media(max-width:760px){
+      .detail-grid{grid-template-columns:1fr 1fr}
+    }
     @media(max-width:680px){
       .form-grid{grid-template-columns:1fr}
       .full{grid-column:auto}
@@ -66,13 +69,14 @@
     <img src="logo.png" alt="Logo Anhanguera Divinópolis/MG" class="logo">
     <div class="campus">Anhanguera Divinópolis/MG</div>
     <h1>Consulta de Salas</h1>
-    <p class="welcome">Bem-vindo(a)! Consulte aqui sua sala de aula.</p>
+    <p class="welcome">Bem-vindo(a)</p>
+    <p class="welcome-sub">Consulte aqui sua sala de aula.</p>
   </header>
 
   <main class="container">
     <section class="panel" aria-label="Consulta de salas">
       <div class="today" id="hojeBox">Carregando o dia de hoje...</div>
-      <p class="panel-title">Escolha seu curso, a disciplina e o turno.</p>
+      <p class="panel-title">Escolha seu curso, a disciplina, a modalidade e o turno.</p>
 
       <div class="form-grid">
         <div>
@@ -82,6 +86,10 @@
         <div>
           <label for="disciplina">Disciplina</label>
           <select id="disciplina" disabled><option value="">Selecione a disciplina</option></select>
+        </div>
+        <div>
+          <label for="modalidade">Modalidade</label>
+          <select id="modalidade" disabled><option value="">Selecione a modalidade</option></select>
         </div>
         <div>
           <label for="turno">Turno</label>
@@ -96,10 +104,8 @@
           <button id="trocarDia" class="secondary" type="button">Consultar outro dia</button>
         </div>
       </div>
-
       <div id="status" aria-live="polite">Carregando dados...</div>
     </section>
-
     <section id="resultados" aria-live="polite"></section>
   </main>
 
@@ -111,6 +117,7 @@
   <script>
     const cursoEl=document.getElementById("curso");
     const disciplinaEl=document.getElementById("disciplina");
+    const modalidadeEl=document.getElementById("modalidade");
     const turnoEl=document.getElementById("turno");
     const diaEl=document.getElementById("dia");
     const campoDiaEl=document.getElementById("campoDia");
@@ -153,9 +160,17 @@
         const valores=separarLinha(linha,sep),obj={};
         cab.forEach((c,i)=>obj[c]=limpar(valores[i]));
         return{
-          Curso:obj.curso||"",Disciplina:obj.disciplina||"",Periodo:obj.periodo||"",
-          Turno:obj.turno||"",Dia:obj.dia||"",Inicio:obj.inicio||"",Fim:obj.fim||"",
-          Sala:obj.sala||"",Bloco:obj.bloco||""
+          Curso:obj.curso||"",
+          Disciplina:obj.disciplina||"",
+          Periodo:obj.periodo||"",
+          Modalidade:obj.modalidade||"",
+          Turno:obj.turno||"",
+          Dia:obj.dia||"",
+          Inicio:obj.inicio||"",
+          Fim:obj.fim||"",
+          Sala:obj.sala||"",
+          Bloco:obj.bloco||"",
+          Professor:obj.docente||obj.professor||obj.tutor||""
         };
       }).filter(r=>r.Curso&&r.Disciplina);
     }
@@ -180,6 +195,7 @@
       const cursos=unicos(dados.filter(r=>r.Dia===dia).map(r=>r.Curso));
       preencherSelect(cursoEl,cursos,"Selecione o curso");
       preencherSelect(disciplinaEl,[],"Selecione a disciplina");
+      preencherSelect(modalidadeEl,[],"Selecione a modalidade");
       preencherSelect(turnoEl,[],"Selecione o turno");
       buscarEl.disabled=true; resultadosEl.innerHTML="";
       statusEl.textContent=cursos.length?`Mostrando opções para ${dia}.`:`Não há aulas cadastradas para ${dia}. Use "Consultar outro dia".`;
@@ -189,19 +205,37 @@
       const dia=diaSelecionado();
       const disciplinas=unicos(dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value).map(r=>r.Disciplina));
       preencherSelect(disciplinaEl,disciplinas,"Selecione a disciplina");
+      preencherSelect(modalidadeEl,[],"Selecione a modalidade");
       preencherSelect(turnoEl,[],"Selecione o turno");
       buscarEl.disabled=true; resultadosEl.innerHTML="";
     });
 
     disciplinaEl.addEventListener("change",()=>{
       const dia=diaSelecionado();
-      const turnos=unicos(dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value&&r.Disciplina===disciplinaEl.value).map(r=>r.Turno));
+      const modalidades=unicos(dados.filter(r=>
+        r.Dia===dia&&
+        r.Curso===cursoEl.value&&
+        r.Disciplina===disciplinaEl.value
+      ).map(r=>r.Modalidade));
+      preencherSelect(modalidadeEl,modalidades,"Selecione a modalidade");
+      preencherSelect(turnoEl,[],"Selecione o turno");
+      buscarEl.disabled=true; resultadosEl.innerHTML="";
+    });
+
+    modalidadeEl.addEventListener("change",()=>{
+      const dia=diaSelecionado();
+      const turnos=unicos(dados.filter(r=>
+        r.Dia===dia&&
+        r.Curso===cursoEl.value&&
+        r.Disciplina===disciplinaEl.value&&
+        r.Modalidade===modalidadeEl.value
+      ).map(r=>r.Turno));
       preencherSelect(turnoEl,turnos,"Selecione o turno");
       buscarEl.disabled=true; resultadosEl.innerHTML="";
     });
 
     turnoEl.addEventListener("change",()=>{
-      buscarEl.disabled=!(cursoEl.value&&disciplinaEl.value&&turnoEl.value&&diaSelecionado());
+      buscarEl.disabled=!(cursoEl.value&&disciplinaEl.value&&modalidadeEl.value&&turnoEl.value&&diaSelecionado());
       resultadosEl.innerHTML="";
     });
 
@@ -214,17 +248,16 @@
         const dias=unicos(dados.map(r=>r.Dia));
         preencherSelect(diaEl,dias,"Selecione o dia");
         diaEl.value=dias.includes(hoje)?hoje:"";
-        cursoEl.disabled=true; disciplinaEl.disabled=true; turnoEl.disabled=true; buscarEl.disabled=true;
+        cursoEl.disabled=true; disciplinaEl.disabled=true; modalidadeEl.disabled=true; turnoEl.disabled=true; buscarEl.disabled=true;
         statusEl.textContent="Escolha o dia que deseja consultar.";
-      }else{
-        atualizarCursos();
-      }
+      }else atualizarCursos();
     });
 
     diaEl.addEventListener("change",()=>{
       if(!diaEl.value){
         cursoEl.disabled=true;
         preencherSelect(disciplinaEl,[],"Selecione a disciplina");
+        preencherSelect(modalidadeEl,[],"Selecione a modalidade");
         preencherSelect(turnoEl,[],"Selecione o turno");
         buscarEl.disabled=true;
         return;
@@ -234,7 +267,7 @@
 
     buscarEl.addEventListener("click",()=>{
       const dia=diaSelecionado();
-      const encontrados=dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value&&r.Disciplina===disciplinaEl.value&&r.Turno===turnoEl.value);
+      const encontrados=dados.filter(r=>r.Dia===dia&&r.Curso===cursoEl.value&&r.Disciplina===disciplinaEl.value&&r.Modalidade===modalidadeEl.value&&r.Turno===turnoEl.value);
       if(!encontrados.length){
         resultadosEl.innerHTML=`<div class="empty">Nenhuma sala encontrada para essa combinação.</div>`;return;
       }
@@ -247,8 +280,9 @@
             <div class="detail"><span class="icon">📍</span><strong>Sala</strong><span>${esc(r.Sala||"Não informada")}</span></div>
             <div class="detail"><span class="icon">🏢</span><strong>Bloco</strong><span>${esc(r.Bloco||"Não informado")}</span></div>
             <div class="detail"><span class="icon">🕒</span><strong>Horário</strong><span>${esc(r.Inicio||"—")} às ${esc(r.Fim||"—")}</span></div>
+            <div class="detail"><span class="icon">👤</span><strong>Docente</strong><span>${esc(r.Professor||"Não informado")}</span></div>
           </div>
-          <p class="summary"><strong>Curso:</strong> ${esc(r.Curso)}</p>
+          <p class="summary"><strong>Curso:</strong> ${esc(r.Curso)}<br><strong>Modalidade:</strong> ${esc(r.Modalidade||"Não informada")}</p>
         </article>`).join("");
     });
 

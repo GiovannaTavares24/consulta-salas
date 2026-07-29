@@ -1,6 +1,361 @@
-﻿Curso;Disciplina;Periodo;Turno;Dia;Inicio;Fim;Sala;Bloco
-Odontologia;Morfofuncional aplicada a Odontologia;1;Noturno;Segunda-feira;19:00:00;20:40;301;A
-Odontologia;Pre Clinico Agravos Esmalte e dentina;3;Noturno;Segunda-feira;19:00:00;20:40;305;A
-Direito;Direito Cibernetico ;1;Noturno;Segunda-feira;19:00:00;20:40;201;B
-Enfermagem;Direito Cibernetico;5;Matutino;Terça-feira;08:00:00;09:40;104;C
-Sistemas de Informação;Modelagem de Dados;3;Noturno;Segunda-feira;19:00:00;20:40;306;D
+﻿Curso;Disciplina;Periodo;Modalidade;Turno;Dia;Inicio;Fim;Sala;Bloco;Docente
+AGRONOMIA;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;215;D;
+BIOMEDICINA VII E VIII;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;310;D;Samuel
+CST - GESTÃO COMERCIAL I e II;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;305;D;Amanda
+EDUCAÇÃO FÍSICA – BACHAREL II;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;218;D;Kildare
+EDUCAÇÃO FÍSICA – BACHAREL III E IV;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;314;D;Lucynara
+ENFERMAGEM VII e VIII;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;301;D;Romana
+ENG. - ENGENHARIA I E II;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;214;D;Tauane
+FARMÁCIA VII e VIII;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;313;D;
+FISIOTERAPIA VI e VII;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;312;D;Francielly
+NUTRIÇÃO VI e VII;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;217;D;Danielle
+PEDAGOGIA III E IV;;;SEMIPRESENCIAL;Noite;Segunda-feira;19:05;21:45;316;D;Otávio
+AGRONOMIA III;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;215;D;Aline
+ARQUITETURA IX e X;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;217;D;Willian
+BIOMEDICINA IV;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;310;D;Cintia
+BIOMEDICINA V E VI;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;301;D;Marina
+CONTABILIDADE VII e VIII;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;305;D;Tulio
+EDUCAÇÃO FÍSICA BACHAREL II;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;218;D;Rayssa
+EDUCAÇÃO FÍSICA V e VI;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;302;D;Gustavo
+ENFERMAGEM III;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;306;D;Romana
+ENFERMAGEM V E VI;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;314;D;Larissa
+FARMÁCIA V E VI;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;221;D;
+FISIOTERAPIA V E VI;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;312;D;Nara
+NUTRIÇÃO V E VI;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;313;D;Lorena
+PEDAGOGIA VII E VIII;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;316;D;Otávio
+TÉCNICOS;;;SEMIPRESENCIAL;Noite;Terça-feira;19:05;21:45;214;D;Dabyene
+ADMINISTRAÇÃO III E IV;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;313;D;Dabieny
+ADMINISTRAÇÃO V e VI;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;301;D;Tiago 
+AGRONOMIA I E II;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;215;D;Ressiliane
+AGRONOMIA V E VI;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;214;D;
+AGRONOMIA VIII e IX;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;215;D;
+BIOMEDICINA III;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;310;D;Denner
+CIÊNCIAS CONTÁBEIS V e VI;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;314;D;Tulio
+CONTÁBEIS III E IV;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;302;D;Lucas
+EDUCAÇÃO FÍSICA BACHAREL VII e VIII;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;305;D;Gustavo
+ENFERMAGEM IV;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;306;D;Romana
+FARMÁCIA III e IV;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;303;D;Daniele
+FISIOTERAPIA III E IV;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;218;D;Nara
+NUTRIÇÃO III E IV;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;312;D;Danielle
+PEDAGOGIA V e VI;;;SEMIPRESENCIAL;Noite;Quarta-feira;19:05;21:45;316;D;Otávio
+ADMINISTRAÇÃO VII e VIII;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;306;D;Lucas
+BIOMEDICINA I e II;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;310;D;Samuel
+CIÊNCIAS CONTÁBEIS e ADMINISTRAÇÃO I;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;302;D;Tiago 
+ENFERMAGEM IX e X;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;;D;Disciplinas Teóricas
+ENGENHARIA CIVIL X;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;214;D;Tauane
+FARMÁCIA I E II;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;217;D;
+FARMÁCIA IX e X;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;;D;Disciplinas Teóricas
+FISIOTERAPIA IX E X;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;;D;Disciplinas Teóricas
+FISIOTERAPIA I E II;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;313;D;Nara
+FONOAUDIOLOGIA;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;218;D;Jaqueline
+NUTRIÇÃO I E II;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;312;D;Danielle
+PEDAGOGIA I E II;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;316;D;Otávio
+TERAPIA OCUPACIONAL;;;SEMIPRESENCIAL;Noite;Quinta-feira;19:05;21:45;215;D;Viviane
+ODONTOLOGIA;Morfofuncional Aplicada a Odontologia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;303;D;Liana
+ODONTOLOGIA;Pré Clinico Agravos Esmalte e Dentina;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;301;E;Claudia
+ODONTOLOGIA;Clinica Propedeutica e Biopsia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;1;A;Liana
+ODONTOLOGIA;Clinica Estagio;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;108;G;Tauana
+ODONTOLOGIA;Saude Coletiva;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;304;D;Jéssica
+ODONTOLOGIA;Pré-Clínico: Agravos ao Periodonto;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;303;D;Gustavo
+ODONTOLOGIA;Clínica III;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;106;G;Christiano
+ODONTOLOGIA;Clínica de Pessoas com Deficiência;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;108;G;Valéria
+ODONTOLOGIA;Ciências Patológicas Aplicadas à Odontologia;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;3;A;Liana
+ODONTOLOGIA;Ciências Patológicas Aplicadas à Odontologia;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;3;A;Liana
+ODONTOLOGIA;Clínica II;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;107;G;Claudia
+ODONTOLOGIA;Morfo Bucomaxilofacial;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;201;E;Timilly
+ODONTOLOGIA;Morfo Bucomaxifacial;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;201;E;Timilly
+ODONTOLOGIA;Pré-Clínico: Agravos da Polpa;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;301;E;Amanda
+ODONTOLOGIA;Clínica de Propedêutica e Cirurgia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;107;G;Felipe
+ODONTOLOGIA;Clínica do Idoso;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;108;G;Victor/Paulo
+ODONTOLOGIA;Ciências Moleculares e Celulares;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;311;D;Liana
+ODONTOLOGIA;Odontologia Cirúrgica e Farmacologia;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;305;D;Felipe Nunes
+ODONTOLOGIA;Pré-Clínico: Propedêutica e Imaginologia;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;302;D;Tauana
+SISTEMAS DE INFORMAÇÃO;Modelagem de Dados ;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;306;D;Douglas José Mendonça
+SISTEMAS DE INFORMAÇÃO;Algoritmos e Logica de Programação;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;310;E;Eduardo Oliveira
+SISTEMAS DE INFORMAÇÃO;Desenvolvimento de E-Commerce com CMS;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;308;E;Jefferson Magalhães
+SISTEMAS DE INFORMAÇÃO;Metodos Matemáticos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;220;D;Sidney Couto
+SISTEMAS DE INFORMAÇÃO;Arquitetura e Organização de Computadores;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;201;E;Bertozzi
+SISTEMAS DE INFORMAÇÃO;Teorias da Administração;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;311;D;Arilda
+SISTEMAS DE INFORMAÇÃO;Desenvolvimento de Chatbot;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;310;E;Jefferson Magalhães
+SISTEMAS DE INFORMAÇÃO;Desenvolvimento de Business Intelligence ;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;308;E;Douglas José Mendonça
+SISTEMAS DE INFORMAÇÃO;Modelo de Negocios para TI;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;307;D;
+SISTEMAS DE INFORMAÇÃO;Logica e Matemática Computacional;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;308;E;Cristian Duarte
+SISTEMAS DE INFORMAÇÃO;Economia para Negocios;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;2;A;Marco Tulio Ferreira
+SISTEMAS DE INFORMAÇÃO;Matematica Discreta;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;308;D;Nayara Carvalho
+SISTEMAS DE INFORMAÇÃO;Programação Web II;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;310;E;Eduardo Oliveira
+SISTEMAS DE INFORMAÇÃO;Gerenciamento e Desenvolvimento em Banco de Dados;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;310;E;Eduardo Oliveira
+SISTEMAS DE INFORMAÇÃO;Desenvolvimento de Soluções Remotas;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;306;E;Cristian Duarte
+ENGENHARIA CIVIL ;Fisica Geral e Experimental - Energia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;308;D;Marcos Amarante
+ENGENHARIA CIVIL ;Algoritmos e Logica de Programacao;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;310;E;Eduardo Oliveira
+ENGENHARIA CIVIL ;Tecnologia e Infraestrutura de Transportes;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;307;D;Marco Antonio Vieira
+ENGENHARIA CIVIL ;Hidraulica e Hidrometria;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;212;E;Heron
+ENGENHARIA CIVIL ;Metodos Matematicos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;220;D;Sidney Couto
+ENGENHARIA CIVIL ;Quimica e Ciencia dos Materiais;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;212;E;Marielle Jordane
+ENGENHARIA CIVIL ;Legislacao, Seguranca do Trabalho e Meio Ambiente;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;309;D;Sylvia Karla
+ENGENHARIA CIVIL ;Topografia e Georreferenciamento;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;216;D;Marco Antonio Vieira
+ENGENHARIA CIVIL ;Estruturas Hiperestaticas;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;213;E;Heron
+ENGENHARIA CIVIL ;Geologia e Mecanica dos Solos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;216;D;Heron
+ENGENHARIA CIVIL ;Processos de Gestao de Obras e Projetos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;304;D;Edinayla
+ENGENHARIA CIVIL ;Pontes e Grandes Estruturas;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;221;D;Icaro
+ENGENHARIA CIVIL ;Cálculo Diferencial e Integral IV;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;216;D;Sidney Couto
+ENGENHARIA CIVIL ;Instalacoes Hidrossanitarias;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;305;D;Tiago Novais
+ENGENHARIA CIVIL ;Estruturas de Concreto Armado II;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;307;D;Icaro
+ENGENHARIA CIVIL ;Fenomenos de Transporte;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;212;E;Wanderson
+ENGENHARIA CIVIL ;Matematica Discreta;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;308;D;Nayara Carvalho
+ENGENHARIA CIVIL ;Calculo Diferencial e Integral II;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;221;D;Nayara Carvalho
+ENGENHARIA CIVIL ;Resistencia dos Materiais;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;301;E;Marcos Amarante
+ENGENHARIA CIVIL ;Tecnologia da Construcao Civil;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;206;E;Edinayla
+ENGENHARIA AMBIENTAL;Fisica Geral e Experimental - Energia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;308;D;Marcos Amarante
+ENGENHARIA AMBIENTAL;Algoritmos e Logica de Programacao;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;310;E;Eduardo Oliveira
+ENGENHARIA AMBIENTAL;Tecnologia e Infraestrutura de Transportes;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;307;D;Marco Antonio Vieira
+ENGENHARIA AMBIENTAL;Hidraulica e Hidrometria;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;212;E;Heron
+ENGENHARIA AMBIENTAL;Metodos Matematicos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;220;D;Sidney Couto
+ENGENHARIA AMBIENTAL;Quimica e Ciencia dos Materiais;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;212;E;Marielle Jordane
+ENGENHARIA AMBIENTAL;Legislacao, Seguranca do Trabalho e Meio Ambiente;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;309;D;Sylvia Karla
+ENGENHARIA AMBIENTAL;Topografia e Georreferenciamento;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;216;D;Marco Antonio Vieira
+ENGENHARIA AMBIENTAL;Estruturas Hiperestaticas;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;213;E;Heron
+ENGENHARIA AMBIENTAL;Geologia e Mecanica dos Solos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;216;D;Heron
+ENGENHARIA AMBIENTAL;Processos de Gestao de Obras e Projetos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;304;D;Edinayla
+ENGENHARIA AMBIENTAL;Pontes e Grandes Estruturas;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;221;D;Icaro
+ENGENHARIA AMBIENTAL;Cálculo Diferencial e Integral IV;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;216;D;Sidney Couto
+ENGENHARIA AMBIENTAL;Instalacoes Hidrossanitarias;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;305;D;Tiago Novais
+ENGENHARIA AMBIENTAL;Estruturas de Concreto Armado II;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;307;D;Icaro
+ENGENHARIA AMBIENTAL;Fenomenos de Transporte;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;212;E;Wanderson
+ENGENHARIA AMBIENTAL;Matematica Discreta;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;308;D;Nayara Carvalho
+ENGENHARIA AMBIENTAL;Calculo Diferencial e Integral II;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;221;D;Nayara Carvalho
+ENGENHARIA AMBIENTAL;Resistencia dos Materiais;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;301;E;Marcos Amarante
+ENGENHARIA AMBIENTAL;Tecnologia da Construcao Civil;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;206;E;Edinayla
+ARQUITETURA;Atelier de Projeto de Arquitetura Estacao Rodoviaria;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;303/304 ;E;Saulo Reis
+ARQUITETURA;Atelier de Projeto de Arquitetura para Espacos Terciarios;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;304;E;Saulo Reis
+ARQUITETURA;Desenho de Arquitetura e Urbanismo;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;1;A;Nilce de Cássia
+ARQUITETURA;Topografia e Georreferenciamento;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;216;D;Marco Antonio Vieira
+ARQUITETURA;Tecnicas Retrospectivas, Restauracao e Patrimonio Historico;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;201;E;Nilce de Cássia
+ARQUITETURA;Informatica Aplicada a Arquitetura e Urbanismo - Projecoes Ortogonais;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;306;E;Marina
+ARQUITETURA;Instalacoes Hidrossanitarias;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;305;D;Tiago Novais
+ARQUITETURA;Expressao e Representacao - Oficinas;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;303;D;Marina
+ARQUITETURA;Resistencia dos Materiais;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;301;E;Marcos Amarante
+ARQUITETURA;Tecnologia da Construcao Civil;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;206;E;Edinayla
+ARQUITETURA;Atelier de Projeto de Arquitetura de Interiores;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;301;D;Nilce de Cássia
+ENGENHARIA MECANICA;Fisica Geral e Experimental - Energia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;308;D;Marcos Amarante
+ENGENHARIA MECANICA;Algoritmos e Logica de Programacao;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;310;E;Eduardo Oliveira
+ENGENHARIA MECANICA;Manufatura Mecanica - Conformacao e Soldagem;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;209;E;Tiago Veloso
+ENGENHARIA MECANICA;Metodos Matematicos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;220;D;Sidney Couto
+ENGENHARIA MECANICA;Quimica e Ciencia dos Materiais;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;212;E;Marielle Jordane
+ENGENHARIA MECANICA;Legislacao, Seguranca do Trabalho e Meio Ambiente;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;309;D;Sylvia Karla
+ENGENHARIA MECANICA;Metrologia;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;;;Tiago Veloso
+ENGENHARIA MECANICA;Materiais de Construcao Mecanica;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;217;D;Tiago Veloso
+ENGENHARIA MECANICA;Calculo Diferencial e Integral IV;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;216;D;Sidney Couto
+ENGENHARIA MECANICA;Analise de Custos;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;311;D;Douglas José Mendonça
+ENGENHARIA MECANICA;Fenomenos de Transporte;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;212;E;Wanderson
+ENGENHARIA MECANICA;Geracao e Distribuicao de Vapor ;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;206;E;Marcos Amarante
+ENGENHARIA MECANICA;Calculo Diferencial e Integral II;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;221;D;Nayara Carvalho
+ENGENHARIA MECANICA;Resistencia dos Materiais;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;301;E;Marcos Amarante
+ENGENHARIA MECANICA;Refrigeracao, Ar Condicionado e Ventilacao;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;302;E;Marco Tulio Ferreira
+ENGENHARIA DE PRODUÇÃO;Fisica Geral e Experimental - Energia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;308;D;Marcos Amarante
+ENGENHARIA DE PRODUÇÃO;Algoritmos e Logica de Programacao;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;310;E;Eduardo Oliveira
+ENGENHARIA DE PRODUÇÃO;Manufatura Mecanica - Conformacao e Soldagem;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;209;E;Tiago Veloso
+ENGENHARIA DE PRODUÇÃO;Metodos Matematicos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;220;D;Sidney Couto
+ENGENHARIA DE PRODUÇÃO;Quimica e Ciencia dos Materiais;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;212;E;Marielle Jordane
+ENGENHARIA DE PRODUÇÃO;Legislacao, Seguranca do Trabalho e Meio Ambiente;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;309;D;Sylvia Karla
+ENGENHARIA DE PRODUÇÃO;Metrologia;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;;;Tiago Veloso
+ENGENHARIA DE PRODUÇÃO;Materiais de Construcao Mecanica;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;217;D;Tiago Veloso
+ENGENHARIA DE PRODUÇÃO;Calculo Diferencial e Integral IV;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;216;D;Sidney Couto
+ENGENHARIA DE PRODUÇÃO;Analise de Custos;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;311;D;Douglas José Mendonça
+ENGENHARIA DE PRODUÇÃO;Fenomenos de Transporte;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;212;E;Wanderson
+ENGENHARIA DE PRODUÇÃO;Geracao e Distribuicao de Vapor ;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;206;E;Marcos Amarante
+ENGENHARIA DE PRODUÇÃO;Calculo Diferencial e Integral II;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;221;D;Nayara Carvalho
+ENGENHARIA DE PRODUÇÃO;Resistencia dos Materiais;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;301;E;Marcos Amarante
+ENGENHARIA DE PRODUÇÃO;Refrigeracao, Ar Condicionado e Ventilacao;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;302;E;Marco Tulio Ferreira
+ENGENHARIA ELETRICA;Fisica Geral e Experimental - Energia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;308;D;Marcos Amarante
+ENGENHARIA ELETRICA;Algoritmos e Logica de Programacao;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;310;E;Eduardo Oliveira
+ENGENHARIA ELETRICA;Conversao Eletromagnetica de Energia e Maquinas Eletricas;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;216;D;Marielle Jordane
+ENGENHARIA ELETRICA;Sistemas Eletricos de Potencia ;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;213;E;Igor de Sousa Ferreira
+ENGENHARIA ELETRICA;Metodos Matematicos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;220;D;Sidney Couto
+ENGENHARIA ELETRICA;Quimica e Ciencia dos Materiais;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;212;E;Marielle Jordane
+ENGENHARIA ELETRICA;Legislacao, Seguranca do Trabalho e Meio Ambiente;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;309;D;Sylvia Karla
+ENGENHARIA ELETRICA;Compatibilidade e Interferencia Eletromagnetica;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;209;E;Marcos Amarante
+ENGENHARIA ELETRICA;Redes de Comunicacao Industrial;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;101;E;Bertozzi
+ENGENHARIA ELETRICA;Fenomenos de Transporte;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;212;E;Wanderson
+ENGENHARIA ELETRICA;Calculo Diferencial e Integral IV;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;216;D;Sidney Couto
+ENGENHARIA ELETRICA;Matematica Discreta;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;308;D;Nayara Carvalho
+ENGENHARIA ELETRICA;Calculo Diferencial e Integral II;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;221;D;Nayara Carvalho
+ENGENHARIA ELETRICA;Resistencia dos Materiais;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;301;E;Marcos Amarante
+ENGENHARIA ELETRICA;Eletronica e Circuitos de Potencia;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;212;E;Guilherme Rodrigues
+PSICOLOGIA;Psicologia e Politicas Publicas;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;302;D;Pedro
+PSICOLOGIA;Matrizes do Pensamento em Psicologia - Psicanalise;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;3;A;Igor Henrique Lopes 
+PSICOLOGIA;Matrizes do Pensamento em Psicologia - Psicanalise;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;3;A;Igor Henrique Lopes 
+PSICOLOGIA;Matrizes do Pensamento em Psicologia - Cognitiva Comportamental;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;214;E;Mateus
+PSICOLOGIA;Matrizes do Pensamento em Psicologia - Cognitiva Comportamental;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;214;E;Mateus
+PSICOLOGIA;Est. Basico IV - Intervencoes Grupais e Individuais em Contextos Especificos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;107;G;Felipe
+PSICOLOGIA;Historia da Psicologia;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;102;E;Fernanda Martins
+PSICOLOGIA;Desenvolvimento Humano II;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;208;E;Fernanda Julia
+PSICOLOGIA;Desenvolvimento Humano II;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;208;E;Fernanda Julia
+PSICOLOGIA;Bases Biologicas do Comportamento;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;4;A;Bianca Sarah
+PSICOLOGIA;Psicologia Escolar e Educacional/ Psicopatologia I;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;3-A/ 205E;;Marie Caroline
+PSICOLOGIA;Medidas e Avaliacao em Psicologia III;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;202;E;Josiany
+PSICOLOGIA;Psicologia Escolar e Educacional;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;3;A;Raquel
+PSICOLOGIA;Psicologia Escolar e Educacional;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;3;A;Raquel
+PSICOLOGIA;Neuroanatomofisiologia;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;102;G;Juliano
+PSICOLOGIA;Neuroanatomofisiologia;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;102;G;Juliano
+PSICOLOGIA;Est. Basico I - Investigacao Cientifica - Etica, Observ. e Registro Profissional;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;108;G;Paulo Penha
+PSICOLOGIA;Diagnostico e Intervencao em Psicologia;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;214;E;Rogeria
+PSICOLOGIA;Diagnostico e Intervencao em Psicologia;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;214;E;Rogeria
+PSICOLOGIA;Orientacao Profissional;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;209;E;Edwani
+PSICOLOGIA;Psicologia Hospitalar;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;2;A;Marie Caroline
+PSICOLOGIA;Matrizes do Pensamento em Psicologia - Behaviorismo;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;302;E;Mateus
+PSICOLOGIA;Psicologia Organizacional e do Trabalho I;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;204;E;Jessica
+PSICOLOGIA;Medidas e Avaliacao em Psicologia II;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;315;D;Josiany
+PSICOLOGIA;Aconselhamento e Orientacao em Psicologia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;3;A;Bianca Sarah
+PSICOLOGIA;Aconselhamento e Orientacao em Psicologia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;3;A;Bianca Sarah
+PSICOLOGIA;Estagio Especifico I - Enfase A ou B;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;105;G;
+PSICOLOGIA;Estagio Especifico II - Enfase A ou B;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;106;G;
+PSICOLOGIA;Estagio Especifico III - Enfase A ou B;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;209;E;
+PSICOLOGIA;Estagio Específico I , II e III;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;220;D;
+PSICOLOGIA;Psicologia, Ciencia e Profissao;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;103;G;Fernanda Martins
+PSICOLOGIA;Psicologia, Ciencia e Profissao;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;103;G;Fernanda Martins
+PSICOLOGIA;Psicologia Social - Avançada;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;208;E;Pedro
+PSICOLOGIA;Matrizes do Pensamento em Psicologia - Existencial Humanista;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;207;E;Juliano
+PSICOLOGIA;Est. Basico II - Planejamento de Acoes e Projetos de Intervencao Contextualizada;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;106;G;Felipe
+PSICOLOGIA;Est. Basico III - Indiv., Grupo e Instit. - Instrum. e Tec. de Coleta de Dados;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;101;G;Paulo 
+PSICOLOGIA;Psicologia Social - Avancada;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;208;E;Pedro
+PSICOLOGIA;Disciplina Especifica II - Enfase A ou B;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;304;D;
+DIREITO;Teoria Geral do Direito Constitucional;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;211;E;Flavio
+DIREITO;Direito Tributario - Direito Constitucional Tributario;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;2;A;Valquiria
+DIREITO;Pratica Juridica em Estagio Supervisionado I;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;101;G;Matheus
+DIREITO;Direito Tributario - Direito Constitucional Tributario;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;2;A;Valquiria
+DIREITO;Titulos de Credito e Recuperacao e Falencia de Empresas;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;302;E;Italo
+DIREITO;Direito Cibernetico;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;103;G;Joice
+DIREITO;Teoria Juridica do Direito Penal;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;214;E;Calixto
+DIREITO;Teoria Juridica do Direito Penal;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;214;E;Calixto
+DIREITO;Etica Profissional em Direito;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;102;G;Flavio
+DIREITO;Etica Profissional em Direito;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;102;G;Flavio
+DIREITO;Pratica Juridica em Estagio Supervisionado II;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;107;G;Matheus / Leticia
+DIREITO;Direito Civil - Sucessoes;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;207;E;Joice
+DIREITO;Direito Processual Civil - Execucao e Cumprimento de Sentenca;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;206;E;Italo
+DIREITO;Teoria Juridica do Direito Penal;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;103;G;Romulo
+DIREITO;Modelo Multiportas e Meios Integradores de Resolucao de Conflitos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;4;A;Joice
+DIREITO;Direito Processual do Trabalho;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;206;E;Felipe
+DIREITO;Pratica Juridica em Estagio Supervisionado IV;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;106;G;Italo / Valquiria
+DIREITO;Direito Processual Civil - Conhecimento e Processo Eletronico;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;103;G;Joice
+DIREITO;Direito Civil - Familia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;102;G;Felipe
+DIREITO;Direito Civil - Familia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;102;G;Felipe
+DIREITO;Direito Civil - Familia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;102;G;Felipe
+DIREITO;Pratica Juridica em Estagio Supervisionado IV;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;101;G;Italo / Valquiria
+DIREITO;Fundamentos Historicos e Introducao ao Estudo do Direito;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;315;D;Felipe
+DIREITO;Teoria Geral do Processo;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;102;G;Rodrigo
+DIREITO;Direito Processual Civil - Conhecimento e Processo Eletronico;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;201;E;Joice
+DIREITO;Direito Processual Civil - Conhecimento e Processo Eletronico;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;201;E;Joice
+DIREITO;Direito Processual Penal - Acao Penal e Procedimentos;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;211;E;Calixto
+DIREITO;Direito Administrativo - Administracao Publica;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;102;E;Stanley
+DIREITO;Pratica Juridica em Estagio Supervisionado II;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;105;G;Romulo / Leticia
+DIREITO;Pratica Juridica em Estagio Supervisionado III;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;108;G;Matheus 
+DIREITO;Direito Tributario - Tributos em Especie e Processo Tributario;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;312;D;Valquiria
+ENFERMAGEM;Cien. Morfofuncionais dos Sistemas Digestorio, Endocrino e Renal;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;102;G;Heber
+ENFERMAGEM;Cien. Morfofuncionais dos Sistemas Digestorio, Endocrino e Renal;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;102;G;Heber
+ENFERMAGEM;Fundamentos Tecnicos de Enfermagem;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;101;E;Ieda
+ENFERMAGEM;Fundamentos Tecnicos de Enfermagem;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;101;E;Ieda
+ENFERMAGEM;Enfermagem na Saude da Mulher;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;203;E;Poliane
+ENFERMAGEM;Urgencia e Emergencia em Enfermagem;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;202;E;
+ENFERMAGEM;Introducao a Biologia Celular e do Desenvolvimento;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;103;G;Vanessa
+ENFERMAGEM;Introducao a Biologia Celular e do Desenvolvimento;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;103;G;Vanessa
+ENFERMAGEM;Farmacologia dos Sistemas;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;101;E;Liliane
+ENFERMAGEM;Farmacologia dos Sistemas;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;101;E;Liliane
+ENFERMAGEM;Seminario Integrador na Saude da Crianca;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;307;D;Heloisa
+ENFERMAGEM;Cien. Morfofuncionais dos Sistemas Tegumentar, Locomotor e Reprodutor;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;207;E;Ricardo
+ENFERMAGEM;Microbiologia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;208;E;Ricardo
+ENFERMAGEM;Fundamentos Tecnicos de Enfermagem;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;221;D;Ieda
+ENFERMAGEM;Fundamentos Tecnicos de Enfermagem;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;221;D;Ieda
+ENFERMAGEM;Enfermagem na Saude da Mulher;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;1;A;Poliane
+ENFERMAGEM;Enfermagem em Centro Cirurgico;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;209;E;Debora Pio
+ENFERMAGEM;Enfermagem em Centro Cirurgico;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;209;E;Debora Pio
+MEDICINA VETERINÁRIA;Biotecnologia e Obstetrícia;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;208;E;A definir 
+MEDICINA VETERINÁRIA;Fisiopatologia da Reprodução;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;207;E;Paulo Marius
+MEDICINA VETERINÁRIA;Caprinocultura e Ovinocultura;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;315;D;Wilma
+MEDICINA VETERINÁRIA;Semiologia e Patologia Clínica;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;102;E;Fernando Richard
+MEDICINA VETERINÁRIA;Patologia Veterinária Geral;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;3;A;Joanna
+MEDICINA VETERINÁRIA;Introdução a Biologia Celular;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;311;D;Mariana
+MEDICINA VETERINÁRIA;Introdução a Biologia Celular;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;311;D;Mariana
+MEDICINA VETERINÁRIA;Equideocultura;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;211;E;Paulo Marius
+MEDICINA VETERINÁRIA;Equideocultura;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;211;E;Paulo Marius
+MEDICINA VETERINÁRIA;Equideocultura;;PRESENCIAL;Tarde;Terça-feira;17:00;18:50;211;E;Paulo Marius
+MEDICINA VETERINÁRIA;Equideocultura;;PRESENCIAL;Tarde;Terça-feira;17:00;18:50;211;E;Paulo Marius
+MEDICINA VETERINÁRIA;Med Vet Preventiva e Defesa Sanitaria;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;210;E;Fernando Richard
+MEDICINA VETERINÁRIA;Nutrição Animal;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;301;E;
+MEDICINA VETERINÁRIA;Protozoologia e Ectoparasitologia;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;2;A;José Neto
+MEDICINA VETERINÁRIA;Protozoologia e Ectoparasitologia;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;2;A;José Neto
+MEDICINA VETERINÁRIA;Anestesiologia Veterinária;;PRESENCIAL;Tarde;Quarta-feira;17:00;18:50;211;E;Bruno
+MEDICINA VETERINÁRIA;Clínica Cirurgica;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;311;D;Iara
+MEDICINA VETERINÁRIA;Diagnóstico por Imagem;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;211;E;Bruno
+MEDICINA VETERINÁRIA;Diagnóstico por Imagem;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;211;E;Bruno
+MEDICINA VETERINÁRIA;Enfermidades Parasitárias;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;1;A;Paulo Marius
+MEDICINA VETERINÁRIA;CMF Vet Sistema Circulatório;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;208;E;Thais
+MEDICINA VETERINÁRIA;Bovinocultura Corte e Leite;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;214;E;Paulo Cesar
+MEDICINA VETERINÁRIA;Processos Patológicos;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;4;A;Wilma
+MEDICINA VETERINÁRIA;Moléstias Infeciosas e Ornitopatologia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;102;E;Fernando Guisini
+MEDICINA VETERINÁRIA;Agrostologia e Forragicultura;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;301;D;Jonas
+MEDICINA VETERINÁRIA;Processos Patológicos;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;4;A;Wilma
+MEDICINA VETERINÁRIA;CMF Vet Genito Urinário;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;211;E;José Neto
+MEDICINA VETERINÁRIA;Caprinocultura e Ovinocultura;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;205;E;Wilma
+MEDICINA VETERINÁRIA;Med Vet Preventiva e Controle Zoonose;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;204;E;Jonas
+MEDICINA VETERINÁRIA;CMF Vet Locomotor;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;214;E;Paulo Marius
+MEDICINA VETERINÁRIA;Prática Hospitalar de Clínica de Grandes (15 em 15 dias);;PRESENCIAL;Noite;Sábado;19:05;21:45;;;Bruna Rios
+MEDICINA VETERINÁRIA;Prática Hospitalar Reprodução e Inspeção Animal;;PRESENCIAL;Noite;Sábado;19:05;21:45;;;Paulo Cesar
+BIOMEDICINA;Cien. Morfo dos Sistemas Dig, Endocrino e Renal;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;102;G;Ricardo Dias
+BIOMEDICINA;Cien. Morfo dos Sistemas Dig, Endocrino e Renal;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;102;G;Heber
+BIOMEDICINA;Genetica Medica;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;315;D;Anderson Melo
+BIOMEDICINA;Introdução a Biologia Celular;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;103;G;Vanessa Rocha
+BIOMEDICINA;Cien. Morfo dos Sist Tegume, Locomotor e Reprodutor;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;207;E;Ricardo Dias
+BIOMEDICINA;Cien. Morfo dos Sist Ner e Cardiorresp;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;316;D;Vanessa Rocha
+CONTABEIS;Capital de Giro e Analise Financeira;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;206;E;Denise Borges
+CONTABEIS;Teoria da Contabilidade;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;302;E;
+CONTABEIS;Metodos Quantitativos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;204;E;Wanderson
+CONTABEIS;Analise de Custos;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;311;D;Douglas Jose Mendonca
+CONTABEIS;Matematica Financeira;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;101;E;Wanderson
+FONOAUDIOLOGIA;Cien. Morfo dos Sistemas Dig, Endocrino e Renal;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;102;G;Heber
+FONOAUDIOLOGIA;Avaliacao, Metodos e Tecnicas em Linguagem Oral;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;102;E;Luciana Costa
+FONOAUDIOLOGIA;Principios de Audiologia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;309;D;Luciana Costa
+FONOAUDIOLOGIA;Cien. Morfo dos Sist Nervoso e Cardiorresp;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;316;D;Vanessa Rocha
+FISIOTERAPIA;Fisioterapia na Saude do Atleta;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;201;E;Maxliano Barros
+FISIOTERAPIA;Cinesioterapia Aplicada;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;304;D;Livian Rabelo
+FISIOTERAPIA;Cien. Morfo dos Sistemas Dig, Endocrino e Renal;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;102;G;Heber
+FISIOTERAPIA;Fisiot Musculoesqueletica na Saude do Adulto;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;308;D;Paulo Eduardo
+FISIOTERAPIA;Fisioterapia em Unidade Hospitalar;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;203;E;Caroline Santana
+FISIOTERAPIA;Introd a Biologia Celular e do Desenv;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;103;G;Vanessa Rocha
+FISIOTERAPIA;Fisiot Cardiopulmonar na Saude do Adulto;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;309;D;Livian Rabelo
+FISIOTERAPIA;Cien. Morfofuncionais dos Sistemas Imune e Hematologico;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;203;E;Vanessa Rocha
+FISIOTERAPIA;Cien. Morfo dos Sist Tegumentar, Locomotor e Reprodutor;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;207;E;Ricardo Dias
+FISIOTERAPIA;Fisioterapia na Atencao Terciaria;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;302;E;Caroline Santana
+FISIOTERAPIA;Diag. Cinetico-Fun e Imagin - Membros Sup, Cab e Tron;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;207;E;Cezenario
+FISIOTERAPIA;Recursos Terapeuticos Biohidricos;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;304;D;Paulo Eduardo
+FISIOTERAPIA;Fisioterapia Dermatofuncional;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;303;D;Livian Rabelo
+FISIOTERAPIA;Cien. Morfo dos Sist Nervoso e Cardiorresp;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;316;D;Vanessa Rocha
+ADMINISTRAÇÃO;Gerenciamento da Cadeia de Suprimentos;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;205;E;Sylvia Karla
+ADMINISTRAÇÃO;Teorias da Administração;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;311;D;Arilda
+ADMINISTRAÇÃO;Simulação Empresarial ;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;204;E;Douglas Jose Mendonca
+ADMINISTRAÇÃO;Mercado de Capitais;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;315;D;Denise 
+ADMINISTRAÇÃO;Metodos Quantitativos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;204;E;Wanderson
+ADMINISTRAÇÃO;Analise de Custos;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;311;D;Douglas Jose Mendonca
+ADMINISTRAÇÃO;Economia para Negocios ;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;2;A;Marco Tulio Ferreira
+ADMINISTRAÇÃO;Processos Logisticos ;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;313;D;Stanley
+ADMINISTRAÇÃO;Modelos de Gestão;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;314;D;
+ADMINISTRAÇÃO;Matematica Financeira;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;101;E;Wanderson
+FARMÁCIA;Tecnologia Farmaceutica II ;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;204;E;Deborah Fernandes
+FARMÁCIA;Controle de Qualidade;;PRESENCIAL;Noite;Segunda-feira;19:05;21:45;309;D;Liliane
+FARMÁCIA;Farmacologia dos Sistemas;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;101;E;
+FARMÁCIA;Genetica Medica;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;315;D;Anderson Melo
+FARMÁCIA;Introdução a Biologia Celular;;PRESENCIAL;Noite;Terça-feira;19:05;21:45;103;G;Vanessa Rocha
+FARMÁCIA;Estagio Supervisionado - Analises Clinicas;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;;;Anderson
+FARMÁCIA;Cosmetologia;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;301;E;Deborah Fernandes
+FARMÁCIA;Fisiopato e Farmac das Doencas Infec, Imunes e Virais;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;220;D;Anderson Melo
+FARMÁCIA;Analises Fisico-Quimicas e Microbiologicas de Alimentos;;PRESENCIAL;Noite;Quarta-feira;19:05;21:45;212;E;Thays Santos
+FARMÁCIA;Projeto de Extensao IV - Farmacia;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;;;
+FARMÁCIA;Fisiopato e Farmaco do Sist Hematologico ;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;314;D;Thays Santos
+FARMÁCIA;Quimica;;PRESENCIAL;Noite;Quinta-feira;19:05;21:45;205;E;Mariana
+FARMÁCIA;Cien. Morfo dos Sist Nervoso e Cardiorresp;;PRESENCIAL;Noite;Sexta-feira;19:05;21:45;316;D;Vanessa Rocha
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
